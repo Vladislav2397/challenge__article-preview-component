@@ -8,14 +8,31 @@ let isOpen = false
 tooltipComponent?.setAttribute('data-open', isOpen.toString())
 openTooltipButton?.setAttribute('data-open', isOpen.toString())
 
-openTooltipButton?.addEventListener('click', () => {
+tooltipComponent?.addEventListener('click', (event: MouseEvent) => {
+    event.preventDefault()
+    event.stopPropagation()
+})
+
+openTooltipButton?.addEventListener('click', (event: MouseEvent) => {
+    event.preventDefault()
+    event.stopPropagation()
+
     if (!isOpen) {
-        tooltipComponent?.setAttribute('data-open', 'true')
-        openTooltipButton?.setAttribute('data-open', 'true')
-        isOpen = true
+        openTooltip()
+        document.body.addEventListener('click', closeTooltip)
     } else {
-        tooltipComponent?.setAttribute('data-open', 'false')
-        openTooltipButton?.setAttribute('data-open', 'false')
-        isOpen = false
+        closeTooltip()
     }
 })
+
+function openTooltip() {
+    tooltipComponent?.setAttribute('data-open', 'true')
+    openTooltipButton?.setAttribute('data-open', 'true')
+    isOpen = true
+}
+
+function closeTooltip() {
+    tooltipComponent?.setAttribute('data-open', 'false')
+    openTooltipButton?.setAttribute('data-open', 'false')
+    isOpen = false
+}
