@@ -37,6 +37,7 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
+- [CSS BEM](https://getbem.com/)
 - [Sass](https://sass-lang.com/) (`src/style.scss`)
 - [TypeScript](https://www.typescriptlang.org/) — share/tooltip behavior in `src/main.ts`
 - [Vite](https://vitejs.dev/) — dev server and production build

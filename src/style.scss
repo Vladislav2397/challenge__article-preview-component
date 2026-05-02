@@ -99,6 +99,7 @@ a {
         font-weight: 700;
         letter-spacing: 1%;
         margin-bottom: 12px;
+        color: var(--very-dark-grayish-blue);
     }
 
     &__description {
@@ -108,6 +109,7 @@ a {
         font-weight: 500;
         letter-spacing: 5%;
         margin-bottom: 30px;
+        color: var(--desaturated-dark-blue);
     }
 
     &__action {
@@ -186,7 +188,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--grayish-blue);
+    color: var(--desaturated-dark-blue);
     background-color: var(--light-grayish-blue);
     z-index: 1;
     transition:
@@ -265,6 +267,7 @@ a {
         line-height: 16px;
         font-weight: 700;
         letter-spacing: 5%;
+        color: var(--very-dark-grayish-blue);
     }
 
     &__date {
@@ -273,6 +276,7 @@ a {
         font-weight: 500;
         line-height: 16px;
         letter-spacing: 6%;
+        color: var(--desaturated-dark-blue);
     }
 
     &__share {
