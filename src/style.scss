@@ -5,6 +5,13 @@
     --light-grayish-blue: hsl(210, 46%, 95%);
 }
 
+$desktop-min-width: 730px;
+$mobile-max-width: $desktop-min-width - 1px;
+
+html {
+    overflow: hidden;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -71,6 +78,7 @@ a {
     // overflow: hidden;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 0 24px -4px rgba(0, 0, 0, 0.1);
 
     &__image {
         aspect-ratio: 327 / 200;
@@ -116,7 +124,7 @@ a {
         }
     }
 
-    @container (max-width: 729px) {
+    @container (max-width: #{$mobile-max-width}) {
         &__popup {
             position: absolute;
             left: 0;
@@ -131,7 +139,7 @@ a {
     }
 
     // at bottom because override base styles
-    @container (min-width: 730px) {
+    @container (min-width: #{$desktop-min-width}) {
         flex-direction: row;
         margin-top: 20px;
 
@@ -170,12 +178,6 @@ a {
     }
 }
 
-// .container {
-//     @container (min-width: 730px) {
-//         //
-//     }
-// }
-
 .share-button {
     position: relative;
     width: 32px;
@@ -205,7 +207,7 @@ a {
         display: flex;
     }
 
-    @container (max-width: 729px) {
+    @container (max-width: #{$mobile-max-width}) {
         &__content {
             position: absolute;
             bottom: 0;
@@ -216,7 +218,7 @@ a {
         }
     }
 
-    @container (min-width: 730px) {
+    @container (min-width: #{$desktop-min-width}) {
         position: relative;
 
         &__content {
